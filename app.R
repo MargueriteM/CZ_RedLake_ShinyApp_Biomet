@@ -92,10 +92,9 @@ library(shiny)
 ui <- 
   navbarPage("Red Lake Playa Biomet Data",
              tabPanel("Overview",
-               "  Welcome!
-               This dashboard shows data collected by the Dryland Critical Zone Project at Red Lake Playa.
-                      
-    Optional Photo display: found in Dryland CZ/Data/Carbon/Tower Data/JER_Playa: 20211023_RedLake_SiteView.jpg"
+              p(strong("Welcome!"),style="font-si20pt"),
+              p("This dashboard shows data collected by the Dryland Critical Zone Project at Red Lake Playa."),
+              p("Optional Photo display: found in Dryland CZ/Data/Carbon/Tower Data/JER_Playa: 20211023_RedLake_SiteView.jpg")
                     
              ),
              tabPanel("Plot timeseries data",
@@ -178,7 +177,14 @@ tabPanel("Windrose",
            fluidRow(
          plotOutput("plot.windrose"))
   )
-         )
+         ),
+tabPanel("UPDATES NEEDED",
+fluidPage(
+  p("* optimise reactive elements"),
+  p("* add picture in first tab") ,
+  p("* make text elements look nicer")
+)
+)
 )
 
 
